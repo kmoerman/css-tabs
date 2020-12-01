@@ -1,0 +1,22 @@
+.tabs {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tabs > [type=radio] {
+  display: none;
+}
+
+.tabs > [type=radio] + label {
+  order: 1;
+  cursor: pointer;
+}
+
+.tabs > [type=radio] + label + * {
+  width: 100%;
+  order: 2;
+}
+
+.tabs > [type=radio]:not(:checked) + label + * {
+  display: none;
+}

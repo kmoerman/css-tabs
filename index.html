@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <title>lightweight css tabs</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- basic tabs pattern in tabs.css -->
+    <link rel="stylesheet" type="text/css" href="tabs.css" />
+
+    <!-- custom styling -->
+    <style>
+      .tabs {
+        width: 50%;
+        min-width: 30em;
+        max-width: 60em;
+      }
+
+      .tabs label {
+        padding: 0.5em 1em;
+      }
+
+      .tabs label + * {
+        padding: 1em;
+      }
+
+      .tabs [type=radio]:checked + label,
+      .tabs [type=radio]:checked + label + * {
+        background: #eee;
+      }
+
+      #big-yellow-square {
+        height: 20em;
+        width: 20em;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Content before</h2>
+    <div class="tabs">
+      <input type="radio" id="tab-1-1" name="tab-group-1" checked>
+      <label for="tab-1-1">First tab</label>
+      <div>
+        Some content,
+        <br />anything.
+      </div>
+
+      <input type="radio" id="tab-1-2" name="tab-group-1">
+      <label for="tab-1-2">Second tab</label>
+      <div>
+        Height!
+        <div id="big-yellow-square"></div>
+      </div>
+
+      <input type="radio" id="tab-1-3" name="tab-group-1">
+      <label for="tab-1-3">Third tab</label>
+      <div>
+        More content.
+      </div>
+    </div>
+    <h2>Content after</h2>
+  </body>
+</html>
